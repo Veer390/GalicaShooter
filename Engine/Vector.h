@@ -44,4 +44,6 @@ public:
 		Temp.y = y * rhs;
 		return Temp;
 	}
+
+	typedef Vector<int> VecI;
 };

@@ -1,0 +1,10 @@
+﻿  compilation header save succeeded; see T:\GalicaSpaceShooter\Engine\FramebufferPS.shh
+  compilation header save succeeded; see T:\GalicaSpaceShooter\Engine\FramebufferVS.shh
+  DXErr.cpp
+  Game.cpp
+  Graphics.cpp
+  Keyboard.cpp
+  Main.cpp
+  MainWindow.cpp
+  Mouse.cpp
+  Engine.vcxproj -> T:\GalicaSpaceShooter\x64\Debug\Engine.exe
