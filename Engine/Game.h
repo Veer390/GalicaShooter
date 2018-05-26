@@ -24,6 +24,8 @@
 #include "Mouse.h"
 #include "Graphics.h"
 #include "AObject.h"
+#include "Texture.h"
+#include <string>
 class Game
 {
 public:
@@ -43,6 +45,7 @@ private:
 	/********************************/
 	/*  User Variables*/
 	Rectangle_ rec;
-	AObject *Obj = new AObject(gfx,rec);
+	Surface::Texture tex;
+
 	/********************************/
 };

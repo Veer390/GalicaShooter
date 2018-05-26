@@ -25,7 +25,8 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	rec(10,10,{200,200})
+	rec(10,10,{200,200}),
+	tex("dib.bmp")
 {}
 
 void Game::Go()
@@ -42,5 +43,5 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
-	Obj->DrawOnScreen();
+	tex.Draw({ 100,100 },gfx);
 }

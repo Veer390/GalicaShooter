@@ -6,7 +6,16 @@ AObject::AObject(Graphics & gfx, Rectangle_ RectBox)
 	CollisionBox(RectBox)
 {}
 
-void AObject::DrawOnScreen()
+AObject::AObject(Graphics & gfx, Rectangle_ Rectbox, bool SimulatePhysics, bool DrawObject, bool DrawCollisionBox)
+	:
+	gfx(&gfx),
+	CollisionBox(Rectbox),
+	SimulatePhysics(SimulatePhysics),
+	DrawObject(DrawObject),
+	DrawCollisionBox(DrawCollisionBox)
+{}
+
+void AObject::DrawRectangle_CollisionMesh(Color c)
 {
-	RendObj->DrawRectangle_Outline(&CollisionBox, { 255,255,255 });
+	RendObj->DrawRectangle_Outline(&CollisionBox, c);
 }
