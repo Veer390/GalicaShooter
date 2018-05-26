@@ -1,2 +1,4 @@
-﻿  Texture.cpp
+﻿  Draw.cpp
+t:\galicaspaceshooter\engine\draw.cpp(43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+t:\galicaspaceshooter\engine\draw.cpp(43): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
   Engine.vcxproj -> T:\GalicaSpaceShooter\x64\Debug\Engine.exe

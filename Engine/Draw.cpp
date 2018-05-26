@@ -29,6 +29,7 @@ void Draw::DrawLine(Vector<int> StartPoint, Vector<int> EndPoint,Color c)
 		for (int x = StartPoint.x; x <= EndPoint.x; x++)
 		{
 			const float y = m * (float)x + b;
+			if((int)x < Graphics::ScreenWidth&&y < Graphics::ScreenHeight)
 			gfx->PutPixel(x, (int)y, c);
 		}
 	}
@@ -44,6 +45,7 @@ void Draw::DrawLine(Vector<int> StartPoint, Vector<int> EndPoint,Color c)
 		for (int y = (int)StartPoint.y; y <= (int)EndPoint.y; y++)
 		{
 			const float x = w * (float)y + p;
+			if((int)x<Graphics::ScreenWidth&&y<Graphics::ScreenHeight)
 			gfx->PutPixel((int)x, y, c);
 		}
 	}

@@ -25,8 +25,8 @@ Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
 	gfx( wnd ),
-	rec(10,10,{200,200}),
-	tex("dib.bmp")
+	rec(100,100,{200,200}),
+	obj(this->gfx,rec)
 {}
 
 void Game::Go()
@@ -39,9 +39,19 @@ void Game::Go()
 
 void Game::UpdateModel()
 {
+	if (st == tim)
+	{
+		x++;
+		y++;
+		//st = 0;
+	}
+	else
+		st++;
+	obj.CollisionBox.MoveCentre({ x,y });
 }
 
 void Game::ComposeFrame()
 {
-	tex.Draw({ 100,100 },gfx);
+	obj.DrawRectangle_CollisionMesh({ 255,255,255 });
+	//tex.Draw({ 100,100 },gfx);
 }

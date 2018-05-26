@@ -44,8 +44,11 @@ private:
 	Graphics gfx;
 	/********************************/
 	/*  User Variables*/
+	int x = 200;
+	int y = 200;
+	int tim = 30;
+	int st = 0;
 	Rectangle_ rec;
-	Surface::Texture tex;
-
+	AObject obj;
 	/********************************/
 };

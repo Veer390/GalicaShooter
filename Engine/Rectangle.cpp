@@ -79,6 +79,7 @@ void Rectangle_::MoveCentre(Vector<int> NewLoc)
 {
 	Centre.x = NewLoc.x;
 	Centre.y = NewLoc.y;
+	RComputeEndPoints();
 }
 
 

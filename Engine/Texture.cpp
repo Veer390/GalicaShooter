@@ -66,6 +66,7 @@ void Surface::Texture::Texture::Draw(Vector<int> Point, Graphics & gfx)
 	{
 		for (int sy = 0; sy < Height; sy++)
 		{
+			if(x+sx <=Graphics::ScreenWidth&&y+sy<=Graphics::ScreenHeight)
 			gfx.PutPixel(x + sx, y + sy, GetPixel(sx, sy));
 		}
 	}

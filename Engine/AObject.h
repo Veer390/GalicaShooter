@@ -7,7 +7,7 @@
 
 class AObject
 {
-protected:
+public:
 	//Constructors
 	AObject() = delete;
 	//An Aobject Can Exist Without a gfx object and rectbox this rectbox can be used for collision..
@@ -16,7 +16,7 @@ protected:
 	//to set Custom flag Values
 	AObject(Graphics &gfx, Rectangle_ Rectbox, bool SimulatePhysics, bool DrawObject, bool DrawCollisionBox);
 
-protected:
+public:
 	//Main Graphics object for the object used for drawing stuff to the screen
 	Graphics* gfx;
 	//Rectangle Box Holds the Rectangle Collision Box.. Must For any Object..
@@ -24,7 +24,7 @@ protected:
 	//Draw Object Used Draw The Object To The Screen
 	Draw *RendObj = new Draw(gfx);
 
-protected:
+public:
 	//flag Variables:
 	
 	//Simulates Physics Either True Or false
