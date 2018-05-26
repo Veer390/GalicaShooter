@@ -1,79 +1,81 @@
 #include "Rectangle.h"
 #include<cmath>
 
-Rectangle::Rectangle(int width, int height, Vector<int> Centre, Graphics & gfx)
+Rectangle_::Rectangle_(int width, int height, Vector<int> Centre)
 	:
+	EndPoints(4),
 	width(width),
 	height(height),
-	Centre(Centre),
-	gfx(&gfx)
+	Centre(Centre)
 {
+	//rendobj = new Draw(this->gfx);
 	RComputeEndPoints();
 }
 
-Rectangle::Rectangle(std::vector<Vector<int>> EndPoints, Graphics & gfx)
+Rectangle_::Rectangle_(std::vector<Vector<int>> EndPoints)
 	:
-	gfx(&gfx),
 	EndPoints(EndPoints)
 {
-	//Compute height and width of the rectangle...
+	//rendobj = new Draw(this->gfx);
+	//Compute height and width of the Rectangle_...
 	width = EndPoints[0].x - EndPoints[1].x;
 	height = EndPoints[3].y - EndPoints[0].y;
 
-	//Compute Centre of the rectangle...
-	Centre.x = EndPoints[0].x - floor(width / 2);
-	Centre.y = EndPoints[0].y + floor(height / 2);
+	//Compute Centre of the Rectangle_...
+	Centre.x = EndPoints[0].x - (int)floor(width / 2);
+	Centre.y = EndPoints[0].y + (int)floor(height / 2);
 }
 
-int Rectangle::GetWidth()
+int Rectangle_::GetWidth()
 {
 	return width;
 }
 
-int Rectangle::GetHeight()
+int Rectangle_::GetHeight()
 {
 	return height;
 }
 
-Vector<int> Rectangle::GetCentre()
+Vector<int> Rectangle_::GetCentre()
 {
 	return Centre;
 }
 
-void Rectangle::SetDebugDrawFlag(bool newval)
+std::vector<Vector<int>> Rectangle_::GetEndPoints()
+{
+	return EndPoints;
+}
+
+void Rectangle_::SetDebugDrawFlag(bool newval)
 {
 	DebugDrawFlag = newval;
 }
 
-void Rectangle::RComputeEndPoints()
+void Rectangle_::RComputeEndPoints()
 {
-	EndPoints[0] = { Centre.x + floor(width / 2),Centre.y - floor(height / 2) };
-	EndPoints[1] = { Centre.x - floor(width / 2),Centre.y - floor(height / 2) };
-	EndPoints[2] = { Centre.x - floor(width / 2),Centre.y + floor(height / 2) };
-	EndPoints[3] = { Centre.x + floor(width / 2),Centre.y + floor(height / 2) };
+	EndPoints[0] = { Centre.x + (int)floor(width / 2),Centre.y - (int)floor(height / 2) };
+	EndPoints[1] = { Centre.x - (int)floor(width / 2),Centre.y - (int)floor(height / 2) };
+	EndPoints[2] = { Centre.x - (int)floor(width / 2),Centre.y + (int)floor(height / 2) };
+	EndPoints[3] = { Centre.x + (int)floor(width / 2),Centre.y + (int)floor(height / 2) };
 }
 
-void Rectangle::SetWidth(int NewWidth)
+void Rectangle_::SetWidth(int NewWidth)
 {
 	width = NewWidth;
 }
 
-void Rectangle::SetHeight(int NewHeight)
+void Rectangle_::SetHeight(int NewHeight)
 {
 	height = NewHeight;
 }
 
-void Rectangle::RMain(Graphics & gfx)
+void Rectangle_::RMain()
 {
 	RComputeEndPoints();
-	if (DebugDrawFlag)
-	{
-		//need to be filled out with drawing routine which draws the outline of the rectangle taking four end points or the centre and width, height
-	}
 }
 
-//Sets the New Location of the Rectangle By Changing its centre i.e Moving its Centre...
-void Rectangle::MoveCentre(Vector<int> NewLoc)
+//Sets the New Location of the Rectangle_ By Changing its centre i.e Moving its Centre...
+void Rectangle_::MoveCentre(Vector<int> NewLoc)
 {
 	Centre.x = NewLoc.x;
 	Centre.y = NewLoc.y;

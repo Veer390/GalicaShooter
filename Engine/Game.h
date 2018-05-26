@@ -23,7 +23,7 @@
 #include "Keyboard.h"
 #include "Mouse.h"
 #include "Graphics.h"
-
+#include "AObject.h"
 class Game
 {
 public:
@@ -41,6 +41,8 @@ private:
 	MainWindow& wnd;
 	Graphics gfx;
 	/********************************/
-	/*  User Variables              */
+	/*  User Variables*/
+	Rectangle_ rec;
+	AObject *Obj = new AObject(gfx,rec);
 	/********************************/
 };

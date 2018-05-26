@@ -10,7 +10,7 @@
 *.db
 *.opendb
 *.ipch
-*.sqlite
+
 
 # Precompiled Headers
 *.gch

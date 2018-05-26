@@ -24,9 +24,9 @@
 Game::Game( MainWindow& wnd )
 	:
 	wnd( wnd ),
-	gfx( wnd )
-{
-}
+	gfx( wnd ),
+	rec(10,10,{200,200})
+{}
 
 void Game::Go()
 {
@@ -42,4 +42,5 @@ void Game::UpdateModel()
 
 void Game::ComposeFrame()
 {
+	Obj->DrawOnScreen();
 }
