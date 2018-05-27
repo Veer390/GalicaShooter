@@ -72,6 +72,16 @@ void Surface::Texture::Texture::Draw(Vector<int> Point, Graphics & gfx)
 	}
 }
 
+int Surface::Texture::GetWidth() const
+{
+	return Width;
+}
+
+int Surface::Texture::GetHeight() const
+{
+	return Height;
+}
+
 Surface::Texture::~Texture()
 {
 	delete[] Pixels;
@@ -80,7 +90,18 @@ Surface::Texture::~Texture()
 
 Surface::Texture & Surface::Texture::operator=(const Texture & rhs)
 {
-	//NOT YET IMPLEMNTED WORK IN PROGRESS
+	delete[] Pixels;
+	Width = rhs.Width;
+	Height = rhs.Height;
+
+	Pixels = new Color[Width*Height];
+	for (int i = 0; i < Width; i++)
+	{
+		for (int j = 0; j < Height; j++)
+		{
+			PutPixel(i, j, rhs.GetPixel(i, j));
+		}
+	}
 	return *this;
 }
 

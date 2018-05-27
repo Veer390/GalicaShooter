@@ -10,7 +10,7 @@ class AObject
 public:
 	//Constructors
 	AObject() = delete;
-	//An Aobject Can Exist Without a gfx object and rectbox this rectbox can be used for collision..
+	//An Aobject Can Exist With a gfx object and rectbox this rectbox can be used for collision..
 	AObject(Graphics &gfx,Rectangle_ RectBox);
 
 	//to set Custom flag Values
@@ -31,7 +31,7 @@ public:
 	bool SimulatePhysics=true;
 	//Draws The Entire Object
 	bool DrawObject=true;
-	//Draws the Collision Boxx only
+	//Draws the Collision Box only
 	bool DrawCollisionBox = false;
 	
 public:

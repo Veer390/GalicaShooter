@@ -1,4 +1,9 @@
-﻿  Draw.cpp
-t:\galicaspaceshooter\engine\draw.cpp(43): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-t:\galicaspaceshooter\engine\draw.cpp(43): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+﻿  Game.cpp
+  Main.cpp
+  MainWindow.cpp
+  Ship.cpp
+t:\galicaspaceshooter\engine\chiliwin.h(24): warning C4005: '_WIN32_WINNT': macro redefinition (compiling source file Ship.cpp)
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\shared\sdkddkver.h(215): note: see previous definition of '_WIN32_WINNT' (compiling source file Ship.cpp)
+t:\galicaspaceshooter\engine\chiliwin.h(64): warning C4005: 'STRICT': macro redefinition (compiling source file Ship.cpp)
+  c:\program files (x86)\windows kits\10\include\10.0.16299.0\shared\minwindef.h(23): note: see previous definition of 'STRICT' (compiling source file Ship.cpp)
   Engine.vcxproj -> T:\GalicaSpaceShooter\x64\Debug\Engine.exe

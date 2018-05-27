@@ -24,6 +24,7 @@
 #include "Mouse.h"
 #include "Graphics.h"
 #include "AObject.h"
+#include "Ship.h"
 #include "Texture.h"
 #include <string>
 class Game
@@ -44,11 +45,6 @@ private:
 	Graphics gfx;
 	/********************************/
 	/*  User Variables*/
-	int x = 200;
-	int y = 200;
-	int tim = 30;
-	int st = 0;
-	Rectangle_ rec;
-	AObject obj;
+
 	/********************************/
 };

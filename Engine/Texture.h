@@ -36,6 +36,11 @@ namespace Surface
 	public:
 		void Draw(Vector<int> Point, Graphics& gfx);
 
+	public:
+		//Helper Functions
+		int GetWidth() const;
+		int GetHeight() const;
+
 
 	public:
 		~Texture();
